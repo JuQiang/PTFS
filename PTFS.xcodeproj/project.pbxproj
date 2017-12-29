@@ -13,6 +13,8 @@
 		E05CEDAE1FF499AA00B81378 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E05CEDAD1FF499AA00B81378 /* Assets.xcassets */; };
 		E05CEDB11FF499AA00B81378 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05CEDAF1FF499AA00B81378 /* LaunchScreen.storyboard */; };
 		E05CEDB41FF499AA00B81378 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDB31FF499AA00B81378 /* main.m */; };
+		E05CEDC61FF4C4CB00B81378 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDC51FF4C4CB00B81378 /* Helper.m */; };
+		E05CEDC91FF615FC00B81378 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDC81FF615FC00B81378 /* Project.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		E05CEDB01FF499AA00B81378 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E05CEDB21FF499AA00B81378 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E05CEDB31FF499AA00B81378 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E05CEDC41FF4C4CB00B81378 /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		E05CEDC51FF4C4CB00B81378 /* Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		E05CEDC71FF615FC00B81378 /* Project.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		E05CEDC81FF615FC00B81378 /* Project.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		E05CEDA31FF499AA00B81378 /* PTFS */ = {
 			isa = PBXGroup;
 			children = (
+				E05CEDBA1FF4C38F00B81378 /* API */,
 				E05CEDA41FF499AA00B81378 /* AppDelegate.h */,
 				E05CEDA51FF499AA00B81378 /* AppDelegate.m */,
 				E05CEDA71FF499AA00B81378 /* ViewController.h */,
@@ -69,6 +76,41 @@
 				E05CEDB31FF499AA00B81378 /* main.m */,
 			);
 			path = PTFS;
+			sourceTree = "<group>";
+		};
+		E05CEDBA1FF4C38F00B81378 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E05CEDBD1FF4C3AE00B81378 /* WorkItem */,
+				E05CEDBC1FF4C3A800B81378 /* TeamProject */,
+				E05CEDBB1FF4C3A100B81378 /* Agile */,
+				E05CEDC41FF4C4CB00B81378 /* Helper.h */,
+				E05CEDC51FF4C4CB00B81378 /* Helper.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E05CEDBB1FF4C3A100B81378 /* Agile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Agile;
+			sourceTree = "<group>";
+		};
+		E05CEDBC1FF4C3A800B81378 /* TeamProject */ = {
+			isa = PBXGroup;
+			children = (
+				E05CEDC71FF615FC00B81378 /* Project.h */,
+				E05CEDC81FF615FC00B81378 /* Project.m */,
+			);
+			path = TeamProject;
+			sourceTree = "<group>";
+		};
+		E05CEDBD1FF4C3AE00B81378 /* WorkItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WorkItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +187,8 @@
 				E05CEDA91FF499AA00B81378 /* ViewController.m in Sources */,
 				E05CEDB41FF499AA00B81378 /* main.m in Sources */,
 				E05CEDA61FF499AA00B81378 /* AppDelegate.m in Sources */,
+				E05CEDC91FF615FC00B81378 /* Project.m in Sources */,
+				E05CEDC61FF4C4CB00B81378 /* Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
