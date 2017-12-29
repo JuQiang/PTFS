@@ -15,6 +15,8 @@
 		E05CEDB41FF499AA00B81378 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDB31FF499AA00B81378 /* main.m */; };
 		E05CEDC61FF4C4CB00B81378 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDC51FF4C4CB00B81378 /* Helper.m */; };
 		E05CEDC91FF615FC00B81378 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDC81FF615FC00B81378 /* Project.m */; };
+		E05CEDCC1FF632A200B81378 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDCB1FF632A200B81378 /* Team.m */; };
+		E05CEDD01FF63A0000B81378 /* Dashboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDCF1FF63A0000B81378 /* Dashboard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		E05CEDC51FF4C4CB00B81378 /* Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		E05CEDC71FF615FC00B81378 /* Project.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		E05CEDC81FF615FC00B81378 /* Project.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		E05CEDCA1FF632A200B81378 /* Team.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		E05CEDCB1FF632A200B81378 /* Team.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		E05CEDCE1FF63A0000B81378 /* Dashboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dashboard.h; sourceTree = "<group>"; };
+		E05CEDCF1FF63A0000B81378 /* Dashboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dashboard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		E05CEDBA1FF4C38F00B81378 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				E05CEDCD1FF639E200B81378 /* DashboardWidget */,
 				E05CEDBD1FF4C3AE00B81378 /* WorkItem */,
 				E05CEDBC1FF4C3A800B81378 /* TeamProject */,
 				E05CEDBB1FF4C3A100B81378 /* Agile */,
@@ -102,6 +109,8 @@
 			children = (
 				E05CEDC71FF615FC00B81378 /* Project.h */,
 				E05CEDC81FF615FC00B81378 /* Project.m */,
+				E05CEDCA1FF632A200B81378 /* Team.h */,
+				E05CEDCB1FF632A200B81378 /* Team.m */,
 			);
 			path = TeamProject;
 			sourceTree = "<group>";
@@ -111,6 +120,15 @@
 			children = (
 			);
 			path = WorkItem;
+			sourceTree = "<group>";
+		};
+		E05CEDCD1FF639E200B81378 /* DashboardWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E05CEDCE1FF63A0000B81378 /* Dashboard.h */,
+				E05CEDCF1FF63A0000B81378 /* Dashboard.m */,
+			);
+			path = DashboardWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +206,9 @@
 				E05CEDB41FF499AA00B81378 /* main.m in Sources */,
 				E05CEDA61FF499AA00B81378 /* AppDelegate.m in Sources */,
 				E05CEDC91FF615FC00B81378 /* Project.m in Sources */,
+				E05CEDCC1FF632A200B81378 /* Team.m in Sources */,
 				E05CEDC61FF4C4CB00B81378 /* Helper.m in Sources */,
+				E05CEDD01FF63A0000B81378 /* Dashboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
