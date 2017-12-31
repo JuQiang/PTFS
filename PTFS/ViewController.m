@@ -11,6 +11,7 @@
 #import "project.h"
 #import "Team.h"
 #import "Dashboard.h"
+#import "Widget.h"
 
 @interface ViewController ()
 - (IBAction)btnConnectClicked:(id)sender;
@@ -39,14 +40,25 @@
     [Helper Login:_txtServer.text username:_txtUser.text password:_txtPass.text success:^(NSString *response) {
         NSMutableArray* prjlist = [Project getList];
         for(int i=0;i<prjlist.count;i++){
-            NSLog(@"%@", ((Project*)prjlist[i]).Name);
-                NSMutableArray* teamlist = [Team getListByProjectID:((Project*)prjlist[i]).Id];
-            for(int j=0;j<teamlist.count;j++){
-                NSLog(@"\t%@", ((Team*)teamlist[j]).Name);
-                NSMutableArray* dblist = [Dashboard getListByProjectID:((Project*)prjlist[i]).Id TeamID:((Team*)teamlist[j]).Id];
-                for(int k=0;k<dblist.count;k++){
-                    NSLog(@"\t\t%@", ((Dashboard*)dblist[k]).Name);
-                }
+            NSLog(@"Project:%@", ((Project*)prjlist[i]).Name);
+                /*NSMutableArray* teamlist = [Team getListByProjectID:((Project*)prjlist[i]).Id];
+                for(int j=0;j<teamlist.count;j++){
+                    NSLog(@"\tTeam:%@", ((Team*)teamlist[j]).Name);
+                    NSMutableArray* dblist = [Dashboard getListByProjectID:((Project*)prjlist[i]).Id TeamID:((Team*)teamlist[j]).Id];
+                    for(int k=0;k<dblist.count;k++){
+                        NSLog(@"\t\tDashboard:%@, %@", ((Dashboard*)dblist[k]).Name,
+                              ((Dashboard*)dblist[k]).URL
+                              );
+                        NSLog(@"\t\tDashboard:%d",k);
+                    }
+                }*/
+            NSMutableArray* dblist = [Dashboard getFormalListByProjectID:((Project*)prjlist[i]).Name];
+            for(int k=0;k<dblist.count;k++){
+                NSLog(@"\tDashboard:%@, %@", ((Dashboard*)dblist[k]).Name,
+                      ((Dashboard*)dblist[k]).URL
+                      );
+                [Widget getListByDashboard:((Dashboard*)dblist[k]).URL];
+                NSLog(@"\tDashboard:%d",k);
             }
             NSLog(@"---------------------------");
         }

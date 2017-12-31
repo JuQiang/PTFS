@@ -11,6 +11,10 @@
 @interface Dashboard : NSObject
 @property NSString* Id;
 @property NSString* Name;
+@property long RefreshInterval;
+@property NSString* URL;
+@property long Position;
 
 +(NSMutableArray*) getListByProjectID:(NSString*) prjID TeamID:(NSString*) teamID;
++(NSMutableArray*) getFormalListByProjectID:(NSString*) prjID;
 @end

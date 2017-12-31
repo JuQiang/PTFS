@@ -17,6 +17,12 @@
 		E05CEDC91FF615FC00B81378 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDC81FF615FC00B81378 /* Project.m */; };
 		E05CEDCC1FF632A200B81378 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDCB1FF632A200B81378 /* Team.m */; };
 		E05CEDD01FF63A0000B81378 /* Dashboard.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDCF1FF63A0000B81378 /* Dashboard.m */; };
+		E05CEDD31FF8DD1900B81378 /* Widget.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDD21FF8DD1900B81378 /* Widget.m */; };
+		E05CEDD61FF8E09300B81378 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDD51FF8E09300B81378 /* Position.m */; };
+		E05CEDD91FF8E0B200B81378 /* TFSSize.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDD81FF8E0B200B81378 /* TFSSize.m */; };
+		E05CEDDC1FF8E34B00B81378 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDDB1FF8E34B00B81378 /* Settings.m */; };
+		E05CEDDF1FF8E39600B81378 /* ColorRule.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDDE1FF8E39600B81378 /* ColorRule.m */; };
+		E05CEDE21FF8EB4200B81378 /* SettingsVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E05CEDE11FF8EB4200B81378 /* SettingsVersion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,18 @@
 		E05CEDCB1FF632A200B81378 /* Team.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 		E05CEDCE1FF63A0000B81378 /* Dashboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dashboard.h; sourceTree = "<group>"; };
 		E05CEDCF1FF63A0000B81378 /* Dashboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dashboard.m; sourceTree = "<group>"; };
+		E05CEDD11FF8DD1900B81378 /* Widget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Widget.h; sourceTree = "<group>"; };
+		E05CEDD21FF8DD1900B81378 /* Widget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Widget.m; sourceTree = "<group>"; };
+		E05CEDD41FF8E09300B81378 /* Position.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
+		E05CEDD51FF8E09300B81378 /* Position.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		E05CEDD71FF8E0B200B81378 /* TFSSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFSSize.h; sourceTree = "<group>"; };
+		E05CEDD81FF8E0B200B81378 /* TFSSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFSSize.m; sourceTree = "<group>"; };
+		E05CEDDA1FF8E34B00B81378 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		E05CEDDB1FF8E34B00B81378 /* Settings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		E05CEDDD1FF8E39600B81378 /* ColorRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorRule.h; sourceTree = "<group>"; };
+		E05CEDDE1FF8E39600B81378 /* ColorRule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorRule.m; sourceTree = "<group>"; };
+		E05CEDE01FF8EB4200B81378 /* SettingsVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsVersion.h; sourceTree = "<group>"; };
+		E05CEDE11FF8EB4200B81378 /* SettingsVersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsVersion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +145,18 @@
 			children = (
 				E05CEDCE1FF63A0000B81378 /* Dashboard.h */,
 				E05CEDCF1FF63A0000B81378 /* Dashboard.m */,
+				E05CEDD11FF8DD1900B81378 /* Widget.h */,
+				E05CEDD21FF8DD1900B81378 /* Widget.m */,
+				E05CEDD41FF8E09300B81378 /* Position.h */,
+				E05CEDD51FF8E09300B81378 /* Position.m */,
+				E05CEDD71FF8E0B200B81378 /* TFSSize.h */,
+				E05CEDD81FF8E0B200B81378 /* TFSSize.m */,
+				E05CEDDA1FF8E34B00B81378 /* Settings.h */,
+				E05CEDDB1FF8E34B00B81378 /* Settings.m */,
+				E05CEDDD1FF8E39600B81378 /* ColorRule.h */,
+				E05CEDDE1FF8E39600B81378 /* ColorRule.m */,
+				E05CEDE01FF8EB4200B81378 /* SettingsVersion.h */,
+				E05CEDE11FF8EB4200B81378 /* SettingsVersion.m */,
 			);
 			path = DashboardWidget;
 			sourceTree = "<group>";
@@ -202,13 +232,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05CEDD91FF8E0B200B81378 /* TFSSize.m in Sources */,
 				E05CEDA91FF499AA00B81378 /* ViewController.m in Sources */,
 				E05CEDB41FF499AA00B81378 /* main.m in Sources */,
+				E05CEDDC1FF8E34B00B81378 /* Settings.m in Sources */,
 				E05CEDA61FF499AA00B81378 /* AppDelegate.m in Sources */,
+				E05CEDDF1FF8E39600B81378 /* ColorRule.m in Sources */,
 				E05CEDC91FF615FC00B81378 /* Project.m in Sources */,
+				E05CEDE21FF8EB4200B81378 /* SettingsVersion.m in Sources */,
 				E05CEDCC1FF632A200B81378 /* Team.m in Sources */,
 				E05CEDC61FF4C4CB00B81378 /* Helper.m in Sources */,
+				E05CEDD61FF8E09300B81378 /* Position.m in Sources */,
 				E05CEDD01FF63A0000B81378 /* Dashboard.m in Sources */,
+				E05CEDD31FF8DD1900B81378 /* Widget.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
