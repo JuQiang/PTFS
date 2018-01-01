@@ -35,19 +35,16 @@ static NSString* Server;
     Server = server;
 }
 
-+(void) Login:(NSString*)server username:(NSString*)user password:(NSString*)pass success:(void (^)(NSString* response))success failure:(void(^)(NSError* error))failure{
++(NSDictionary*) Login:(NSString*)server username:(NSString*)user password:(NSString*)pass{
 
     
     Helper.UserName = user;
     Helper.PassWord = pass;
     Helper.Server = server;
     
-    [Helper HttpGet:
-            [NSString stringWithFormat:@"%@/_apis/process/processes?api-version=1.0",server]
-            success:success
-            failure:failure
-     ];
+    NSDictionary* ret = [Helper getHttpResponseByUrl:[NSString stringWithFormat:@"%@/_apis/process/processes?api-version=1.0",server]];
     
+    return ret;
 }
 
 +(void) HttpGet:(NSString*) url success:(void (^)(NSString* response))success failure:(void(^)(NSError* error))failure{

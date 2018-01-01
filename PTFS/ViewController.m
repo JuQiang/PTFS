@@ -12,6 +12,7 @@
 #import "Team.h"
 #import "Dashboard.h"
 #import "Widget.h"
+#import "UITableViewControllerProject.h"
 
 @interface ViewController ()
 - (IBAction)btnConnectClicked:(id)sender;
@@ -37,21 +38,31 @@
 
 
 - (IBAction)btnConnectClicked:(id)sender {
-    [Helper Login:_txtServer.text username:_txtUser.text password:_txtPass.text success:^(NSString *response) {
-        NSMutableArray* prjlist = [Project getList];
-        for(int i=0;i<prjlist.count;i++){
+    NSDictionary* prjlist = [Helper Login:_txtServer.text username:_txtUser.text password:_txtPass.text];
+    int proccount = [[prjlist objectForKey:@"count"] intValue];
+    if(proccount<1){
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Oops" message:@"Something maybe wrong.\r\nPlease ensure you have a correct TFS server address, and corresponding username/password." preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:
+         [UIAlertAction
+          actionWithTitle:@"OK"
+          style:UIAlertActionStyleDefault
+          handler:nil
+          ]
+         ];
+        [self presentViewController:alert animated:true completion:nil];
+        return;
+        
+    }
+    UITableViewControllerProject* prjlistView = [self.storyboard instantiateViewControllerWithIdentifier:@"identityUITableViewControllerProject"];
+    
+    prjlistView.title = @"Select Project";
+    prjlistView.ProjectList = [Project getList];
+    
+    [self.navigationController pushViewController:prjlistView animated:YES];
+    return;
+    
+        /*for(int i=0;i<prjlist.count;i++){
             NSLog(@"Project:%@", ((Project*)prjlist[i]).Name);
-                /*NSMutableArray* teamlist = [Team getListByProjectID:((Project*)prjlist[i]).Id];
-                for(int j=0;j<teamlist.count;j++){
-                    NSLog(@"\tTeam:%@", ((Team*)teamlist[j]).Name);
-                    NSMutableArray* dblist = [Dashboard getListByProjectID:((Project*)prjlist[i]).Id TeamID:((Team*)teamlist[j]).Id];
-                    for(int k=0;k<dblist.count;k++){
-                        NSLog(@"\t\tDashboard:%@, %@", ((Dashboard*)dblist[k]).Name,
-                              ((Dashboard*)dblist[k]).URL
-                              );
-                        NSLog(@"\t\tDashboard:%d",k);
-                    }
-                }*/
             NSMutableArray* dblist = [Dashboard getFormalListByProjectID:((Project*)prjlist[i]).Name];
             for(int k=0;k<dblist.count;k++){
                 NSLog(@"\tDashboard:%@, %@", ((Dashboard*)dblist[k]).Name,
@@ -71,16 +82,11 @@
           ]
          ];
         [self presentViewController:alert animated:true completion:nil];
-    } failure:^(NSError *error) {
-        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Warning" message:[error localizedDescription] preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:
-         [UIAlertAction
-          actionWithTitle:@"OK"
-          style:UIAlertActionStyleDefault
-          handler:nil
-          ]
-         ];
-        [self presentViewController:alert animated:true completion:nil];
-    } ];
+         */
+        
+    
 }
 @end
+
+
+

@@ -73,6 +73,7 @@
                 if(rules!=[NSNull null]){
                     for(int j=0;j<rules.count;j++){
                         ColorRule* rule = [ColorRule alloc];
+
                         NSDictionary* ruledic = (NSDictionary*)rules[j];
                         rule.IsEnabled = [[ruledic objectForKey:@"isEnabled"] boolValue];
                         rule.BackgroundColor = [ruledic objectForKey:@"backgroundColor"];
@@ -80,6 +81,8 @@
                         rule.Operator = [ruledic objectForKey:@"operator"];
                         
                         [widget.Settings.ColorRuleList addObject:rule];
+                        
+                        
                     }
                 }
             }

@@ -11,7 +11,7 @@
 @interface Helper : NSObject
 
 +(void) HttpGet:(NSString*) url success:(void (^)(NSString* response))success failure:(void(^)(NSError* error))failure;
-+(void) Login:(NSString*)server username:(NSString*)user password:(NSString*)pass success:(void (^)(NSString* response))success failure:(void(^)(NSError* error))failure;
++(NSDictionary*) Login:(NSString*)server username:(NSString*)user password:(NSString*)pass;
 
 + (NSString*) getUserName;
 +(void) setUserName:(NSString*) user;
